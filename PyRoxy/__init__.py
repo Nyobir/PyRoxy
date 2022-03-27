@@ -164,7 +164,7 @@ class ProxyChecker:
     @staticmethod
     def checkAll(proxies: Collection[Proxy],
                  url: Any = "https://httpbin.org/get",
-                 timeout=5,
+                 timeout=7,
                  threads=1000):
         with ThreadPoolExecutor(
                 max(min(round(len(proxies) * cpu_count()), threads),
